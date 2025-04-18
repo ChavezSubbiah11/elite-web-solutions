@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elite Web Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --bg: #121212;
+      --bg-alt: #1e1e1e;
+      --text: #f0f0f0;
+      --accent: #ff4d4d;
+      --card-bg: #2a2a2a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--bg-alt);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 1.5rem;
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #bbb;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .timeline li {
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-left: 4px solid var(--accent);
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .contact-form,
+    .newsletter form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    input, textarea, button {
+      padding: 1rem;
+      border-radius: 5px;
+      border: none;
+    }
+
+    input, textarea {
+      background: #333;
+      color: #fff;
+    }
+
+    button {
+      background: var(--accent);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #cc0000;
+    }
+
+    .floating-cta {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(255,0,0,0.3);
+    }
+
+    #countdown {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#team">Team</a>
+    <a href="#workflow">Workflow</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#connect">Connect</a>
+  </nav>
+
+  <header class="hero">
+    <h1>Elite Web Solutions</h1>
+    <p>Modern, Scalable, Elegant Website Development</p>
+  </header>
+
+  <!-- Countdown -->
+  <section>
+    <h2>Project Launch In:</h2>
+    <div id="countdown">
+      <div><span id="days">00</span><br>Days</div>
+      <div><span id="hours">00</span><br>Hours</div>
+      <div><span id="minutes">00</span><br>Minutes</div>
+      <div><span id="seconds">00</span><br>Seconds</div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2>What We Do</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg" alt="Web Development" />
+        <h3>Custom Web Development</h3>
+        <p>Tailored websites and applications to suit your unique goals and brand identity.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" alt="Event Site" />
+        <h3>Event Websites</h3>
+        <p>Conference-ready platforms, event schedules, ticket systems and more.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg" alt="Strategy" />
+        <h3>Digital Strategy</h3>
+        <p>Comprehensive digital campaigns that boost visibility and customer reach.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team">
+    <h2>Meet the Team</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.pexels.com/photos/1181695/pexels-photo-1181695.jpeg" alt="Team Member" />
+        <h3>Alex Smith</h3>
+        <p>Founder & Full Stack Developer</p>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/3775535/pexels-photo-3775535.jpeg" alt="Team Member" />
+        <h3>Jamie Lee</h3>
+        <p>Lead Designer & UX Specialist</p>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Team Member" />
+        <h3>Jordan Ray</h3>
+        <p>SEO & Analytics Manager</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow -->
+  <section id="workflow">
+    <h2>Our Process</h2>
+    <ul class="timeline">
+      <li><strong>Discovery:</strong> Define your business goals & tech requirements.</li>
+      <li><strong>Design:</strong> Create mockups and design systems tailored to your audience.</li>
+      <li><strong>Development:</strong> Build with modern stacks (HTML, JS, APIs, CMS, etc).</li>
+      <li><strong>Testing:</strong> Speed, UX, cross-browser and mobile QA.</li>
+      <li><strong>Launch:</strong> Go live with tracking, reports, and support built-in.</li>
+    </ul>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>Client Testimonials</h2>
+    <div class="testimonial">
+      “Elite Web Solutions brought our digital vision to life. Amazing design and support.”
+      <br><strong>– Natasha R., Event Planner</strong>
+    </div>
+    <div class="testimonial">
+      “We doubled our conversions after the launch. Their UX strategy is gold.”
+      <br><strong>– Michael D., Tech Startup CEO</strong>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="connect">
+    <h2>Let’s Connect</h2>
+    <p style="text-align: center;">Have a project in mind? Reach out and let’s build something amazing together.</p>
+    <form class="contact-form" action="mailto:your@email.com" method="POST" enctype="text/plain">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <a href="#connect" class="floating-cta">Work With Us</a>
+
+  <script>
+    const countDate = new Date("April 21, 2025 00:00:00").getTime();
+    const countdown = setInterval(() => {
+      const now = new Date().getTime();
+      const gap = countDate - now;
+
+      const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
+      document.getElementById('days').innerText = Math.floor(gap / day);
+      document.getElementById('hours').innerText = Math.floor((gap % day) / hour);
+      document.getElementById('minutes').innerText = Math.floor((gap % hour) / minute);
+      document.getElementById('seconds').innerText = Math.floor((gap % minute) / second);
+    }, 1000);
+  </script>
+
+</body>
+</html>
