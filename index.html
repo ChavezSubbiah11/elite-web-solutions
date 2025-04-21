@@ -165,6 +165,7 @@
       font-size: 1.5rem;
       margin-top: 2rem;
     }
+
   </style>
 </head>
 <body>
@@ -176,6 +177,16 @@
     <a href="#testimonials">Testimonials</a>
     <a href="#connect">Connect</a>
   </nav>
+
+      </div>
+      
+
+      </div>
+    </nav>
+  </header>
+    </nav>
+  </header>
+
 
   <header class="hero">
     <h1>Elite Web Solutions</h1>
@@ -267,61 +278,98 @@
     <h2>Let’s Connect</h2>
     <p style="text-align: center;">Have a project in mind? Reach out and let’s build something amazing together.</p>
     <form class="contact-form" action="mailto:your@email.com" method="POST" enctype="text/plain">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+        <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+
+
     </form>
+
+
+
+      <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+
+
   </section>
 
   <a href="#connect" class="floating-cta">Work With Us</a>
 
   <script>
-    const countDate = new Date("April 21, 2025 00:00:00").getTime();
-    const countdown = setInterval(() => {
-      const now = new Date().getTime();
-      const gap = countDate - now;
+    // Set the target launch date
+  const countDownDate = new Date("JUNE 30, 2025 00:00:00").getTime();
 
-      const second = 1000,
-            minute = second * 60,
-            hour = minute * 60,
-            day = hour * 24;
-    
+const countdown = setInterval(function () {
+  const now = new Date().getTime();
+  const distance = countDownDate - now;
 
-      document.getElementById('days').innerText = Math.floor(gap / day);
-      document.getElementById('hours').innerText = Math.floor((gap % day) / hour);
-      document.getElementById('minutes').innerText = Math.floor((gap % hour) / minute);
-      document.getElementById('seconds').innerText = Math.floor((gap % minute) / second);
-    }, 1000);
+  if (distance < 0) {
+    clearInterval(countdown);
+    document.getElementById("countdown").innerHTML = "🚀 We're Live!";
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerHTML =
+    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}, 1000);
+
+
+</script>
+
+
+  document.getElementById("countdown").innerHTML =
+    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}, 1000);
   </script>
+<script>
+  <script>
+  
+</script>
+
 
 </body>
+<div id="countdown"></div>
+
 </html>
 
 <li><a href="projects.html">Projects</a></li>
 
-<section class="projects">
+<section class=>
     <h1>Our Projects</h1>
     <div class="project-list">
         <div class="project-item">
-            <img src="https://via.placeholder.com/350x250?text=Project+1" alt="Project 1">
-            <h2>Project 1</h2>
-            <p>Short description of the project goes here. This can explain what the project is about, technologies used, and the value it brought to the client.</p>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Project 1">
+            <h2>Custom Software Solutions Platform</h2>
+            <p>Developed a tailored web platform for a growing tech startup to showcase their digital services. Built using HTML, CSS, and JavaScript, the project emphasizes responsiveness, performance, and modern UI/UX design. This platform improved the client’s online visibility and provided a seamless user experience for their customers.</p>
             <a href="#">View Project</a>
         </div>
         <div class="project-item">
-            <img src="https://via.placeholder.com/350x250?text=Project+2" alt="Project 2">
-            <h2>Project 2</h2>
-            <p>Short description of the project goes here.</p>
+            <img src="https://i.pinimg.com/736x/9a/24/df/9a24dfe3aad00a434ecefeb3a0a08277.jpg" alt="Project 2">
+            <h2>Analytics Dashboard</h2>
+            <p>Engineered a real-time analytics dashboard that visualizes user behavior, traffic trends, and key performance indicators. Developed using modern JavaScript libraries and RESTful APIs, the dashboard enables businesses to make data-driven decisions with confidence.</p>
             <a href="#">View Project</a>
         </div>
         <div class="project-item">
-            <img src="https://via.placeholder.com/350x250?text=Project+3" alt="Project 3">
-            <h2>Project 3</h2>
-            <p>Short description of the project goes here.</p>
+            <img src="https://i.pinimg.com/736x/88/10/13/881013470173d7350fcbb6c414ecc495.jpg" alt="Project 3">
+            <h2>Responsive Business Website</h2>
+            <p>Crafted a sleek, mobile-friendly business website tailored to a logistics company. The solution includes service pages, dynamic contact forms, and Google Maps integration — enhancing professionalism and lead generation for the client.</p>
             <a href="#">View Project</a>
         </div>
     </div>
 </section>
 
-<img src="images/project1.jpg" alt="Project 1">
+<img src="images/project1.jpg" alt=>
+
+
+
+
+
+  
